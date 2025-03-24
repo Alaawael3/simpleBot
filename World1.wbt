@@ -1,0 +1,217 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.07806729689025402 -0.02970605927722612 -0.9965054175459694 3.866432483376221
+  position 0.3705596255909156 0.6318795160275239 0.12259947816308074
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2 2
+}
+Robot {
+  translation 0.0639380602160208 0.8990535614811561 0.025907856879356345
+  rotation 0.0003374733317232391 0.0003288159047736407 0.9999998889959194 1.545094519104003
+  children [
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 1251.2686885872974
+        anchor -0.05 0.03 -0.006
+      }
+      device [
+        RotationalMotor {
+          name "RBmotor"
+        }
+      ]
+      endPoint Solid {
+        translation -0.05 0.03 -0.006
+        rotation -0.4042509403865448 -0.820623188099008 -0.40392915263795254 4.516754063406821
+        children [
+          DEF wheel Shape {
+            appearance PBRAppearance {
+              baseColor 1 0.5 0
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.01
+              radius 0.02
+            }
+          }
+        ]
+        name "solid(3)"
+        boundingObject USE wheel
+        physics Physics {
+        }
+        linearVelocity 0.06277783436160084 -0.0016144329507443824 -9.361565189680473e-07
+        angularVelocity 0.08071164608134195 3.1389625160067767 -2.7048715819914474e-05
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 1397.1009326527371
+        anchor 0.05 0.03 -0.006
+      }
+      device [
+        RotationalMotor {
+          name "LBmotor"
+        }
+      ]
+      endPoint Solid {
+        translation 0.05 0.03 -0.006
+        rotation 0.6687429962629347 0.32600200176140115 0.6682106702207261 2.5108473567348604
+        children [
+          DEF wheel Shape {
+            appearance PBRAppearance {
+              baseColor 1 0.5 0
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.01
+              radius 0.02
+            }
+          }
+        ]
+        name "solid(2)"
+        boundingObject USE wheel
+        physics Physics {
+        }
+        linearVelocity 0.06278120398766451 -0.0016144136027825965 9.380601446988513e-07
+        angularVelocity 0.08071166140708018 3.138962511122483 -2.708257371795635e-05
+      }
+    }
+    DistanceSensor {
+      translation -0.03 -0.04 0
+      rotation 0 0 1 -2.094399693899575
+      children [
+        DEF sensor Shape {
+          appearance PBRAppearance {
+            baseColor 0 0.6 1
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.01 0.01 0.01
+          }
+        }
+      ]
+      name "Rsensor"
+      boundingObject USE sensor
+      physics Physics {
+      }
+    }
+    DistanceSensor {
+      translation 0.03 -0.04 0
+      rotation 0 0 1 -1.1781003061004252
+      children [
+        DEF sensor Shape {
+          appearance PBRAppearance {
+            baseColor 0 0.6 1
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.01 0.01 0.01
+          }
+        }
+      ]
+      name "Lsensor"
+      boundingObject USE sensor
+      physics Physics {
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 1251.2686742481374
+        anchor -0.05 -0.02 -0.006
+      }
+      device [
+        RotationalMotor {
+          name "RFmotor"
+        }
+      ]
+      endPoint Solid {
+        translation -0.05 -0.02 -0.006
+        rotation -0.40424601439402025 -0.8206280374248485 -0.40392423056656446 4.516759859990456
+        children [
+          DEF wheel Shape {
+            appearance PBRAppearance {
+              baseColor 1 0.5 0
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.01
+              radius 0.02
+            }
+          }
+        ]
+        name "solid(1)"
+        boundingObject USE wheel
+        physics Physics {
+        }
+        linearVelocity 0.06277803313904916 -0.001614052453775898 -9.366669331041795e-07
+        angularVelocity 0.0807116610995982 3.1389625152178926 -2.7070489255278916e-05
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 1397.1009140037697
+        anchor 0.05 -0.02 -0.006
+      }
+      device [
+        RotationalMotor {
+          name "LFmotor"
+        }
+      ]
+      endPoint Solid {
+        translation 0.05 -0.02 -0.006
+        rotation 0.668741314553727 0.32600889572580855 0.6682089898501756 2.5108348853842064
+        children [
+          DEF wheel Shape {
+            appearance PBRAppearance {
+              baseColor 1 0.5 0
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.01
+              radius 0.02
+            }
+          }
+        ]
+        boundingObject USE wheel
+        physics Physics {
+        }
+        linearVelocity 0.06278027896009197 -0.001614033214008516 9.37549742740019e-07
+        angularVelocity 0.08071168155054924 3.1389625320235237 -2.712056064079591e-05
+      }
+    }
+    DEF body Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0.6
+        roughness 1
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.05
+        radius 0.05
+      }
+    }
+  ]
+  boundingObject USE body
+  physics Physics {
+  }
+  controller "forward_controller"
+  linearVelocity 0.06277933110217278 -0.0016144875214716022 6.42450412556735e-10
+  angularVelocity 1.91189243051043e-05 -4.810680451587178e-07 -2.686294279794385e-05
+}
